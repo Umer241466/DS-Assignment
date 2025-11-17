@@ -26,23 +26,23 @@ public:
         Node* newNode = new Node(value);
         newNode->setNext(topNode);
         topNode = newNode;
-        cout << value << " pushed onto stack.\n";
+        cout << value << " pushed onto stack"<<endl;
     }
 
     void pop() {
         if (empty()) {
-            cout << "Stack Underflow! Nothing to pop.\n";
+            cout << "Stack Underflow"<<endl;
             return;
         }
         Node* temp = topNode;
-        cout << topNode->getData() << " popped from stack.\n";
+        cout << topNode->getData() << " is popped"<<endl;
         topNode = topNode->getNext();
         delete temp;
     }
 
     int top() const {
         if (empty()) {
-            cout << "Stack is empty!\n";
+            cout << "Stack is empty"<<endl;
             return -1;
         }
         return topNode->getData();
@@ -50,13 +50,13 @@ public:
 
     void display() const {
         if (empty()) {
-            cout << "Stack is empty.\n";
+            cout << "Stack is empty"<<Endl;
             return;
         }
-        cout << "Stack (top to bottom): ";
+        cout << "Stack  ";
         Node* temp = topNode;
         while (temp != nullptr) {
-            cout << temp->getData() << " ";
+            cout << temp->getData() << "  ";
             temp = temp->getNext();
         }
         cout << endl;
@@ -74,9 +74,10 @@ int main() {
     s.push(20);
     s.push(30);
     s.display();
-    cout << "Top element of stack " << s.top() << endl;
+    cout << "Top element " << s.top() << endl;
     s.pop();
     s.display();
-    cout << "Top element of stack after pop " << s.top() << endl;
+    cout << "Top elementafter popping " << s.top() << endl;
     return 0;
 }
+

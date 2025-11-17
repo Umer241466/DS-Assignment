@@ -20,32 +20,32 @@ public:
     }
     void push(int value) {
         if (full()) {
-            cout << "Stack Overflow! Cannot push " << value << endl;
+            cout << "OVer flow is happening " << value << endl;
             return;
         }
         arr[++topIndex] = value;
-        cout << value << " pushed onto stack.\n";
+        cout << value << " pushed on stack"<<endl;
     }
     void pop() {
         if (empty()) {
-            cout << "Stack Underflow! Nothing to pop.\n";
+            cout << " Underflow! "<<endl;
             return;
         }
-        cout << arr[topIndex--] << " popped from stack.\n";
+        cout << arr[topIndex--] << " popped from stack"<<endl;
     }
     int top() const {
         if (empty()) {
-            cout << "Stack is empty!\n";
+            cout << "Stack is empt"<<endl;
             return -1;
         }
         return arr[topIndex];
     }
     void display() const {
         if (empty()) {
-            cout << "Stack is empty.\n";
+            cout << "Stack is empty"<<endl;
             return;
         }
-        cout << "Stack (top to bottom): ";
+        cout << "Stack: ";
         for (int i = topIndex; i >= 0; --i)
             cout << arr[i] << " ";
         cout << endl;
@@ -66,3 +66,4 @@ int main() {
     cout << "Top of stack after popping " << s.top() << endl;
     return 0;
 }
+
